@@ -1,0 +1,119 @@
+#main-wrapper #inventory-table-wrapper {
+  #inventory-table thead {
+    tr th {
+      span {
+        color: inherit;
+      }
+
+      .filter-icon {
+        display: inline-block;
+        position: absolute;
+        left: -1em;
+        top: calc(50% - 0.4em);
+        cursor: pointer;
+        background: url("../images/filter-icon.svg") no-repeat;
+        background-size: 0.9em;
+        width: 0.9em;
+        height: 0.9em;
+        background-origin: content-box;
+        opacity: 0.3;
+
+        &:hover {
+          opacity: 1;
+        }
+
+        &.opaque {
+          opacity: 1;
+        }
+      }
+    }
+
+    #filter-popup-holder-tr {
+      z-index: 3;
+
+      th {
+        position: relative;
+        background: transparent;
+        color: #ffffff;
+        font-size: 1em;
+        text-align: left;
+        font-weight: normal;
+        padding: 0;
+        margin: 0;
+        white-space: default;
+        text-overflow: default;
+        overflow: visible;
+
+        .filter-popup {
+          display: none;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 3;
+          background: #ffffff;
+          padding: 8px 4px 4px;
+          max-height: 260px;
+          min-width: 120px;
+          width: 100%;
+          max-width: 100%;
+          box-sizing: border-box;
+          overflow: hidden;
+          @include box-shadow-wihtout-top(0, 0, 10px, rgba(0,0,0,0.35));
+          @include bottom-left-corner-radius($default-border-radius);
+          @include bottom-right-corner-radius($default-border-radius);
+
+          &[field-name="ID"] {
+            max-height: 290px;
+
+            #show-deleted-items-checkbox-holder {
+              margin-top: 10px;
+              margin-left: 2px;
+
+              .state {
+                font-size: 0.7em;
+              }
+            }
+          }
+
+          div {
+            text-align: center;
+
+            .button {
+              font-size: 0.9em;
+              padding: 4px 8px;
+              font-weight: bold;
+
+              &+.button {
+                margin-left: 8px;
+              }
+            }
+          }
+
+          ul {
+            list-style-type: none;
+            margin: 10px 0 0;
+            padding: 2px 4px;
+            max-width: 100%;
+            max-height: 220px;
+            box-sizing: border-box;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            border: 1px #dadada solid;
+            font-size: 0.8em;
+            @include border-radius($default-border-radius);
+
+            li {
+              margin: 0;
+              padding: 0 0 1px;
+              max-width: 100%;
+
+              .pretty .state {
+                font-size: 0.85em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

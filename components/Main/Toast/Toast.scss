@@ -1,0 +1,34 @@
+#toast-wrapper {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  margin: 0 auto;
+  padding: 12px 24px;
+  max-width: 30%;
+  text-align: center;
+  @include border-radius($default-border-radius);
+  background: rgba(0,0,0,0.95);
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.2em;
+  @include box-shadow(0, 0, 30px, rgba(0,0,0,0.75));
+  @extend .noselect;
+
+  span {
+    font-size: 0.8em;
+    color: #ffffff;
+
+    b,
+    i,
+    u {
+      color: #ffffff;
+    }
+
+    i,
+    u {
+      font-weight: normal;
+    }
+  }
+}

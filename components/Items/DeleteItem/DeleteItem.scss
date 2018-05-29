@@ -1,0 +1,30 @@
+#popup-window #popup-window-main-content-wrapper {
+  #delete-confirm-popup-window-content-wrapper {
+    display: inline-block;
+    height: calc(100% - 65px);
+    width: 100%;
+    position: relative;
+    padding-top: 20px;
+
+    p {
+      display: block !important;
+      font-weight: bold;
+    }
+
+    #delete-confirm-popup-button-wrapper {
+      display: block;
+      text-align: center;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+
+      .button {
+        font-weight: bold;
+
+        &+.button {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}

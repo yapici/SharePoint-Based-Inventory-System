@@ -1,0 +1,83 @@
+#main-wrapper {
+  #inventory-table-wrapper {
+    position: relative;
+
+    #inventory-table {
+      margin: 20px 0 0;
+
+      thead tr {
+        &:not(.shadow) {
+          th {
+            position: relative;
+
+            &:first-child {
+              width: 60px;
+              padding-left: 0;
+              padding-right: 0;
+            }
+          }
+
+          .inventory-table-thead-text-wrapper {
+            position: relative;
+            color: inherit;
+
+            .inventory-table-thead-text {
+              cursor: pointer;
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+
+      tbody {
+        .deleted-item-tr {
+          a,
+          div,
+          span {
+            color: #B81414;
+          }
+
+          .deleted-item-td {
+            padding: 8px 12px;
+            color: #B81414;
+
+            a,
+            div,
+            span {
+              color: #B81414;
+            }
+          }
+        }
+      }
+
+      td {
+        input {
+          -webkit-transition: background-color 300ms linear;
+          -moz-transition: background-color 300ms linear;
+          -o-transition: background-color 300ms linear;
+          -ms-transition: background-color 300ms linear;
+          transition: background-color 300ms linear;
+        }
+
+        &:first-child {
+          width: 60px;
+          font-weight: bold;
+          cursor: pointer;
+        }
+      }
+    }
+
+    #add-new-button {
+      position: absolute;
+      left: 0;
+      top: -38px;
+      font-size: 0.9em;
+      white-space: nowrap;
+      overflow: hidden;
+      font-weight: bold;
+    }
+  }
+}

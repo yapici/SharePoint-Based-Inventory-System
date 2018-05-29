@@ -1,0 +1,111 @@
+$default-border-radius: 4px;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin box-shadow($x, $y, $blur, $color) {
+  -webkit-box-shadow: $x $y $blur $color;
+  -moz-box-shadow: $x $y $blur $color;
+  -box-shadow: $x $y $blur $color;
+  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10px,MakeShadow=true,ShadowOpacity=0.15);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=10px,MakeShadow=true,ShadowOpacity=0.15)";
+  zoom: 1;
+}
+
+@mixin box-shadow-wihtout-top($x, $y, $blur, $color) {
+  @include box-shadow($x, $y, $blur, $color);
+  clip-path: polygon(-10% 0, 110% 0, 110% 110%, -10% 110%);
+}
+
+@mixin top-left-corner-radius($radius) {
+  -webkit-border-top-left-radius: $radius;
+  -moz-border-radius-topleft: $radius;
+  border-top-left-radius: $radius;
+}
+
+@mixin top-right-corner-radius($radius) {
+  -webkit-border-top-right-radius: $radius;
+  -moz-border-radius-topright: $radius;
+  border-top-right-radius: $radius;
+}
+
+@mixin bottom-left-corner-radius($radius) {
+  -webkit-border-bottom-left-radius: $radius;
+  -moz-border-radius-bottomleft: $radius;
+  border-bottom-left-radius: $radius;
+}
+
+@mixin bottom-right-corner-radius($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+  -moz-border-radius-bottomright: $radius;
+  border-bottom-right-radius: $radius;
+}
+
+@mixin box-sizing-border-box {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+@mixin shadow($intensity) {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  z-index: 2;
+  padding: 3px 8px;
+  background: -moz-linear-gradient(top, rgba(0,0,0,$intensity) 0%, rgba(0,0,0,0) 100%);
+  background: -webkit-linear-gradient(top, rgba(0,0,0,$intensity) 0%,rgba(0,0,0,0) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,$intensity) 0%,rgba(0,0,0,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66000000', endColorstr='#00000000',GradientType=0 );
+  overflow: hidden;
+}
+
+@mixin animate-maxheight-change($duration) {
+  -webkit-transition: max-height $duration ease;
+  -moz-transition: max-height $duration ease;
+  -ms-transition: max-height $duration ease;
+  -o-transition: max-height $duration ease;
+  transition: max-height $duration ease;
+}
+
+@mixin animate-width-change($duration) {
+  -webkit-transition: width $duration ease;
+  -moz-transition: width $duration ease;
+  -ms-transition: width $duration ease;
+  -o-transition: width $duration ease;
+  transition: width $duration ease;
+}
+
+@mixin box-sizing-border-box() {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mixin background-dimension() {
+  background-image: url('../images/dimension.png');
+  background-repeat: repeat;
+  background-size: 32px 32px;
+}
+
+@mixin opacity-transition() {
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -ms-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Inventory-System",
+  "version": "2.7.1434",
+  "author": "Engin Yapici",
+  "scripts": {
+    "dev": "gulp dev",
+    "deploy": "gulp live",
+    "html": "gulp html",
+    "js": "gulp js",
+    "version": "gulp version-patch",
+    "v-patch": "gulp version-patch",
+    "v-minor": "gulp version-minor",
+    "v-major": "gulp version-major",
+    "scss": "gulp scss",
+    "watch": "gulp watch",
+    "watch-html": "gulp watch-html",
+    "watch-js": "gulp watch-js",
+    "watch-scss": "gulp watch-scss"
+  },
+  "devDependencies": {
+    "gulp": "git+https://git@github.com/gulpjs/gulp.git#4.0",
+    "gulp-bump": "^3.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-insert": "^0.5.0",
+    "gulp-merge": "^0.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify-es": "^1.0.1"
+  },
+  "dependencies": {}
+}

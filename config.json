@@ -1,0 +1,50 @@
+{
+  "gulp": {
+    "urlLive": "./live/",
+    "urlDev": "./dev/",
+    "src": {
+      "html": {
+        "header": [
+          "./components/Main/Header/Header.html"
+        ],
+        "contents": [
+          "./components/Items/Search/Search.html",
+          "./components/Items/InventoryTable/InventoryTable.html",
+          "./html/*.html",
+          "./components/**/*.html",
+          "./components/**/**/*.html",
+          "!./components/Main/Header/Header.html"
+        ]
+      },
+      "js": [
+        "./js/Log.js",
+        "./js/*.js",
+        "./js/libraries/*.js",
+        "./components/Main/*.js",
+        "./components/Main/**/*.js",
+        "./components/**/*.js",
+        "./components/**/**/*.js",
+        "!./node_modules",
+        "!./node_modules/**",
+        "./js/PageLoaded.js"
+      ],
+      "scss": [
+        "./scss/*.scss",
+        "./scss/libraries/*.scss",
+        "./components/**/*.scss",
+        "./components/**/**/*.scss",
+        "!./node_modules",
+        "!./node_modules/**"
+      ],
+      "scss_watch": [
+        "./scss/*.scss",
+        "./scss/libraries/*.scss",
+        "./scss/**/*.scss",
+        "./components/**/*.scss",
+        "./components/**/**/*.scss",
+        "!./node_modules",
+        "!./node_modules/**"
+      ]
+    }
+  }
+}

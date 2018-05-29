@@ -1,0 +1,57 @@
+#main-wrapper {
+  #audit-trail-table {
+    margin: 10px;
+    width: calc(100% - 20px);
+    max-height: calc(100% - 46px);
+    min-height: 35px;
+
+    thead tr:not(.shadow) th {
+      &.audit-trail-changes-td {
+        width: 50%;
+      }
+
+      &:first-child {
+        width: 60px;
+        padding: 8px 4px;
+      }
+    }
+
+    tbody tr td {
+      padding: 8px 12px;
+      width: auto;
+
+      &:after {
+        height: 80%;
+        top: 10%;
+      }
+
+      &:first-child {
+        padding: 8px 4px;
+        width: 60px;
+      }
+
+      &:not(.audit-trail-changes-td) {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      &.audit-trail-changes-td {
+        width: 50%;
+        text-align: left;
+
+        .audit-trail-changes-text {
+          color: $dark-main-color;
+          font-style: italic;
+        }
+      }
+
+      #new-item-title-text {
+        font-weight: bold;
+        text-decoration: underline;
+        color: $dark-main-color;
+        padding-bottom: 2px;
+      }
+    }
+  }
+}

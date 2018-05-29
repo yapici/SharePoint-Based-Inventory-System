@@ -1,0 +1,277 @@
+@charset "utf-8";
+@import "./scss/partials/include";
+
+*,
+body,
+html {
+  /* Setting the parameters for the whole website for all views  */
+  font-family: 'OpenSans', sans-serif;
+  font-size: 14px;
+  color: $main-text-color;
+}
+
+#contentBox,
+#s4-workspace,
+body,
+form,
+html {
+  max-width: 100%;
+  // overflow-x: hidden;
+}
+
+html {
+  width: 100%;
+}
+
+body,
+body.ms-backgroundImage {
+  min-width: 100%;
+  position: absolute;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  @include background-dimension();
+}
+
+#main-wrapper {
+  width: calc(100vw - 50px);
+  min-width: 800px;
+  text-align: center;
+  margin-top: 30px;
+
+  .underlined {
+    text-decoration: underline;
+  }
+
+  table {
+    border-collapse: collapse;
+    margin: 0;
+    @include box-shadow(0, 0, 10px, rgba(0,0,0,0.15));
+    width: 100%;
+
+    thead tr {
+      th {
+        background: $main-color;
+        color: #ffffff;
+        font-size: 1em;
+        text-align: center;
+        font-weight: bold;
+        padding: 8px 12px;
+        margin: 0;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+
+        &:last-child {
+          width: 1em;
+          min-width: 1em;
+          max-width: 1em;
+          padding: 0;
+          margin: 0;
+        }
+      }
+
+      &.shadow th {
+        max-width: 100%;
+      }
+    }
+
+    td {
+      position: relative;
+      white-space: nowrap;
+
+      &:after {
+        content: '';
+        width: 1px;
+        height: 60%;
+        top: 20%;
+        background: rgba(0, 0, 0, 0.1);
+        position: absolute;
+        right: 0;
+      }
+
+      &:last-child {
+        &:after {
+          background: transparent;
+        }
+      }
+    }
+
+    tbody {
+      tr td {
+        background: $white-color;
+        padding: 0;
+
+        input,
+        select {
+          border: none;
+          padding: 8px 12px;
+          width: 100%;
+          text-align-last: center;
+          text-align: center;
+          background-color: transparent;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+
+          &:focus {
+            outline-style: none;
+            box-shadow: none;
+            border: none;
+            background: $light-color-2;
+          }
+        }
+      }
+
+      tr:last-child {
+        td {
+          &:first-child {
+            @include bottom-left-corner-radius($default-border-radius);
+          }
+
+          &:last-child {
+            @include bottom-right-corner-radius($default-border-radius);
+          }
+        }
+      }
+
+      tr:nth-child(even) > td {
+        background-color: $very-light-gray-color;
+      }
+
+      tr:nth-child(odd) > td {
+        background-color: $white-color;
+      }
+
+      tr:hover > td {
+        background-color: $light-color-3;
+      }
+    }
+  }
+
+  .scrollable-table {
+    width: 100%;
+    left: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: column;
+    @include animate-maxheight-change(0.6s);
+    @include border-radius($default-border-radius);
+    // overflow: hidden;
+    max-height: calc(100vh - 170px);
+    min-height: 35px;
+
+    thead {
+      position: relative;
+      width: 100%;
+      display: table;
+      table-layout: fixed;
+
+      tr:first-child {
+        th:first-child {
+          @include top-left-corner-radius($default-border-radius);
+        }
+
+        th:last-child {
+          @include top-right-corner-radius($default-border-radius);
+        }
+      }
+
+      .shadow {
+        position: relative;
+
+        th {
+          overflow: hidden;
+          @include shadow(0.2);
+        }
+      }
+    }
+
+    tbody {
+      display: block;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      width: 100%;
+      height: 100%;
+      max-height: 100%;
+      background: transparent;
+      @include bottom-left-corner-radius($default-border-radius);
+      @include bottom-right-corner-radius($default-border-radius);
+
+      tr {
+        width: 100%;
+        display: table;
+        table-layout: fixed;
+        overflow-y: visible;
+
+        td+td {
+          width: auto;
+        }
+      }
+    }
+  }
+}
+
+.shadow,
+.shadow th {
+  border-radius: 0 !important;
+  border: none;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.button {
+  background: $main-color;
+  color: #ffffff;
+  padding: 8px 20px;
+  text-decoration: none;
+  cursor: pointer;
+  @include border-radius($default-border-radius);
+  @include box-shadow(0, 0, 10px, rgba(0,0,0,0.15));
+  @extend .noselect;
+
+  &:hover {
+    background: #59B2EE;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 1em;
+  height: 1em;
+}
+
+::-webkit-scrollbar-track {
+  background: $white-color;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $light-gray-color;
+}
+
+body,
+body.ms-backgroundImage,
+html {
+  scrollbar-track-color: $white-color;
+  scrollbar-base-color: $white-color;
+  scrollbar-face-color: $light-gray-color;
+  scrollbar-3dlight-color: $white-color;
+  scrollbar-highlight-color: $light-gray-color;
+  scrollbar-arrow-color: $mid-gray-color;
+  scrollbar-shadow-color: $light-gray-color;
+  scrollbar-dark-shadow-color: $light-gray-color;
+}
+
+#large-metal-tank-img {
+  width: 250px;
+}
+
+#large-thermo-locator-img,
+#medium-thermo-locator-img {
+  width: 200px;
+}

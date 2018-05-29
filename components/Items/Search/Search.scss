@@ -1,0 +1,128 @@
+#search-elements-wrapper {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  width: 60%;
+  height: 44px;
+  border-bottom: 2px solid $main-color;
+  @include border-radius($default-border-radius);
+  @include box-shadow(0, 0, 10px, rgba(0,0,0,0.15));
+
+  #search-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    height: 44px;
+    width: calc(100% - 43px);
+    margin: 0;
+    padding: 0 10px;
+    line-height: 44px;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background: #ffffff;
+    border: none;
+    border-top: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+    color: #000000;
+    border-radius: 0;
+    font-size: 1em;
+    @include top-left-corner-radius($default-border-radius);
+
+    &:focus {
+      -moz-box-shadow: inset 0 0 8px 0 rgba(0, 147, 208, 0.4);
+      -webkit-box-shadow: inset 0 0 8px 0 rgba(0, 147, 208, 0.4);
+      box-shadow: inset 0 0 8px 0 rgba(0, 147, 208, 0.4);
+    }
+  }
+
+  #search-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    border-radius: 0;
+    border: none;
+    height: 44px;
+    width: 44px;
+    margin: 0;
+    padding: 0;
+    line-height: 44px;
+    text-align: center;
+    @include top-right-corner-radius($default-border-radius);
+    @include bottom-right-corner-radius($default-border-radius);
+
+    img {
+      width: 20px;
+      margin-top: 12px;
+    }
+  }
+
+  #search-cancel-button {
+    position: absolute;
+    width: auto;
+    top: calc(50% - 0.55em);
+    right: 56px;
+    font-weight: bold;
+    color: #006DBD;
+    cursor: pointer;
+    opacity: 0.5;
+    display: none;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  #number-of-search-results-holder {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: -1.6em;
+    font-size: 0.8em;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    color: #777777;
+  }
+
+  #search-elements-grayout {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: calc(100% + 2px);
+    width: 100%;
+    background: rgba(0,0,0,0.2);
+    @include border-radius($default-border-radius);
+    @extend .noselect;
+  }
+
+  #search-checkbox-holder {
+    position: absolute;
+    bottom: -1.6em;
+    left: 1em;
+    display: none;
+
+    #search-checkbox-text {
+      font-style: italic;
+      font-size: 0.9em;
+    }
+
+    .pretty {
+      line-height: 0.9em;
+
+      .state {
+        label {
+          font-size: 0.9em;
+        }
+      }
+    }
+  }
+}

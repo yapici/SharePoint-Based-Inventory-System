@@ -1,0 +1,11 @@
+<script type="text/javascript" src="http://sharepoint.com/SiteName/SiteAssets/Inventory-Dev/js/jquery-3.2.1.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="http://sharepoint.com/SiteName/SiteAssets/Inventory-Dev/css/main.min.css">
+
+<script type="text/javascript" src="http://sharepoint.com/SiteName/SiteAssets/Inventory-Dev/js/w3.js"></script>
+
+<div w3-include-html="http://sharepoint.com/SiteName/SiteAssets/Inventory-Dev/html/content.html"></div>
+
+<script type="text/javascript" src="http://sharepoint.com/SiteName/SiteAssets/Inventory-Dev/js/main.min.js"></script>
+
+<link rel="icon" type="image/png" href="http://sharepoint.com/SiteName/SiteAssets/Inventory-Dev/images/favicon-96x96.png?v=4" sizes="96x96" />

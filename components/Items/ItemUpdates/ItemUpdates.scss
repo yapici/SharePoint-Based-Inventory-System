@@ -1,0 +1,43 @@
+#main-wrapper #inventory-table-wrapper #inventory-table tbody tr td input {
+  &.highlighted {
+    background-color: $light-color-1;
+  }
+}
+
+#eln-number-request-popup-contents {
+  width: 96%;
+  margin: 10px auto;
+  position: relative;
+  height: calc(100% - 45px);
+
+  .scrollable-table {
+    max-height: calc(100% - 60px);
+    min-height: 35px;
+
+    thead tr:not(.shadow) {
+      th:first-child {
+        width: 80px;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    td {
+      &:first-child {
+        width: 80px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .button {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    bottom: 10px;
+    font-weight: bold;
+  }
+}

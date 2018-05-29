@@ -1,0 +1,27 @@
+#main-wrapper #inventory-table-wrapper {
+  #inventory-table thead {
+    tr th {
+      span {
+        color: inherit;
+      }
+
+      .sort-arrow {
+        display: none;
+        position: absolute;
+        padding-left: 2px;
+        color: inherit;
+        cursor: pointer;
+      }
+    }
+  }
+
+  #clear-sort-button {
+    display: none;
+    position: absolute;
+    top: -1.6em;
+    font-size: 0.9em;
+    right: 2px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+}
