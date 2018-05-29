@@ -9,7 +9,7 @@ A versatile inventory system with SharePoint backend
 ### How to use this system:
 
 1. Create a new page under your SharePoint site (e.g. with a name ***Inventory.aspx***)
-2. Go to your site in a browser and add a new ***HTML Form Web Part*** to the page. Click *Source Editor*, remove all the content and add below code (replace the URLs with your own site's URL):
+2. Go to your site in a browser and add a new ***HTML Form Web Part*** to the page. Click '*Source Editor*', remove all the content and add below code (replace the URLs with your own site's URL):
 ```<script type="text/javascript" src="http://sharepoint.com/SiteName/SiteAssets/Inventory/js/jquery-3.2.1.min.js"></script>
 
 <link rel="stylesheet" type="text/css" href="http://sharepoint.com/SiteName/SiteAssets/Inventory/css/main.min.css">
@@ -48,12 +48,12 @@ Save and close the '*Source Editor*'. Save the page.
 | eLN     | Single line of text
 | User     | Person or group
 
-4. Go to **components > Items > NSItems.js** and update the field names in '*instance.settings*' accordingly.
+4. Go to **components > Items > NSItems.js** in your codebase and update the field names in '*instance.settings*' accordingly.
 5. Open a terminal (or a command line) window, navigate to the codebase directory, and run the following commands:
 	- npm install
 	- npm run deploy
-5. Copy everything under ***live*** directory in your codebase to your site's *SiteAssets* directory.
+5. Copy everything from ***live*** directory in your codebase to your site's *SiteAssets* directory.
 
-Once you complete these steps, your inventory system should be running without a problem. If you need any help you can reach out at engin.yapici@gmail.com.
+Once you complete these steps, your inventory system should be running without a problem. If you need any help you can reach me at engin.yapici@gmail.com.
 
 
